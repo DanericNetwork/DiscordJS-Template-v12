@@ -36,8 +36,8 @@ client.on('message', async message =>{
             await cooldowns.delete(message.author.id);
           }, config.commandCooldown * 1000);
         } catch (err) {
-          message.channel.send(`An error occured while trying to run \`${command.config.name}\`, if this happens multiple times please notify the developers!`);
-          console.log(`An error occured while trying to run \`${command.config.name}\`!`);
+          message.channel.send(`An error occured while trying to run \`${command.conf.name}\`, if this happens multiple times please notify the developers!`);
+          console.log(`An error occured while trying to run \`${command.conf.name}\`!`);
           console.log(err);
         }
       }
