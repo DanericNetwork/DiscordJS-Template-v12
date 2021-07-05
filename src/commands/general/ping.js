@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
     await msg.edit(null, embed);
 }
 
-module.exports.config = {
+module.exports.conf = {
   name: 'ping',
   description: 'Check the bot ping',
   category: 'general',
