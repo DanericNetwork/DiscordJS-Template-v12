@@ -29,12 +29,6 @@ client.on('message', async message =>{
           if (command.ownerOnly && !config.owners.includes(message.author.id)) return message.channel.send('❌ | This command is restricted to the owners.');
           if (!message.guild && command.guildOnly) return message.channel.send('❌ | You can only use this command in a server!');
     
-          await command.run(client, message, args);
-          if (!config.owners.includes(message.author.id)) cooldowns.add(message.author.id);
-    
-          setTimeout(async () => {
-            await cooldowns.delete(message.author.id);
-          }, config.commandCooldown * 1000);
         } catch (err) {
           message.channel.send(`An error occured while trying to run \`${command.conf.name}\`, if this happens multiple times please notify the developers!`);
           console.log(`An error occured while trying to run \`${command.conf.name}\`!`);
