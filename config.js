@@ -1,5 +1,5 @@
 module.exports = {
     token: '', // Discord Bot Token
     prefix: '!', // Bot Prefix
-    owners: [''],
+    owners: [''], // List of owner IDs
 }
